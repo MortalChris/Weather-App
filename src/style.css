@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+:root{
+    --clr-one: #540d6e ;
+    --clr-two: #ee4266 ;
+    --clr-three: #ffd23f ;
+    --clr-four: #3bceac ;
+    --clr-five: #0ead69 ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+}
+body{
+    background-color: #FE7F2D;
+}
+#container{
+    margin-top: 5rem;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    
+}
+#weather-app-Container{
+    border: .5rem solid var(--clr-two);
+    border-radius: 2rem;
+    height: 50rem;
+    width: 30rem;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: stretch;
+    background-color: var(--clr-one);
+}
+
+#input-city-name{
+    border-radius: 1rem 0rem 0rem 0rem;
+    border: .2rem solid var(--clr-three);
+    background-color: var(--clr-two);
+    color: var(--clr-three);
+}
+::placeholder{
+    color: var(--clr-three);
+}
+#submit-button{
+    border-radius: 0rem 1rem 0rem 0rem;
+    border: .2rem solid var(--clr-three);
+    background-color: var(--clr-two);
+    color: var(--clr-three)
+}
+
+
+
+
+#city-text{
+    margin-top: 4rem;
+    font-size: 2rem;
+    color: var(--clr-three);
+}
+img{
+    margin-top: 3rem;
+    height: 20rem;
+    width: auto;
+}
+#temperature{
+    margin-top: 1rem;
+    font-size: 8rem;
+    color: var(--clr-two);
+}
+#weather-text{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--clr-three);
+}

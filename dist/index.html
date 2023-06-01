@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
     <body>
+        <div id="container">
+            <div id="input-city-container">
+                <form>
+                    <input id="input-city-name" type="text" placeholder=" Enter City Name">
+                    <input id="submit-button" type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="weather-app-Container">
+                <div id="city-text-container">
+                    <h2 id="city-text">Houston, Texas</h2>
+                </div>
+                <div id="img-container">
+                    <img src="https://cdn3.iconfinder.com/data/icons/weather-705/64/Partly-cloudy-sun-sky-weather-512.png" alt="Partly-Cloudy">
+                </div>
+                <div id="temp/weather-container">
+                    <h1 id="temperature">100 D</h1>
+                    <p id="weather-text">Sunny</p>
+                </div>
+            </div>
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
