@@ -43,6 +43,7 @@ body{
     border: .2rem solid var(--clr-three);
     background-color: var(--clr-two);
     color: var(--clr-three);
+    outline: none;
 }
 ::placeholder{
     color: var(--clr-three);
@@ -62,8 +63,6 @@ body{
     background-color: var(--clr-one);
     transform: translateY(.2rem);
 }
-
-
 
 
 #city-text{
