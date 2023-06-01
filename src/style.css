@@ -15,7 +15,7 @@ body{
     background-color: #FE7F2D;
 }
 #container{
-    margin-top: 5rem;
+    margin-top: 4rem;
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -38,6 +38,7 @@ body{
 }
 
 #input-city-name{
+    padding: .6rem;
     border-radius: 1rem 0rem 0rem 0rem;
     border: .2rem solid var(--clr-three);
     background-color: var(--clr-two);
@@ -47,10 +48,19 @@ body{
     color: var(--clr-three);
 }
 #submit-button{
+    padding: .6rem;
     border-radius: 0rem 1rem 0rem 0rem;
     border: .2rem solid var(--clr-three);
     background-color: var(--clr-two);
-    color: var(--clr-three)
+    color: var(--clr-three);
+    transition-duration: .4s;
+}
+#submit-button:hover{
+    transform: scale(1.3);
+}
+#submit-button:active{
+    background-color: var(--clr-one);
+    transform: translateY(.2rem);
 }
 
 
