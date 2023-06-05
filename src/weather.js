@@ -1,31 +1,27 @@
+import {config} from './config.js';
 function weatherApp(){
     const button = document.getElementById("submit-button");
 
     button.addEventListener("click", function click(){
         const inputCity = document.getElementById("input-city-name").value;
         console.log(inputCity);
-        getLocation();
+        getWeather(inputCity);
         clearText();
-    })
+    })  
 
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            // x.innerHTML = "Geolocation is not supported by this browser.";
-            console.log("Error: Geolocation is not supported by this browser.")
-        }	
-    }
-    function showPosition(position) {
-        getWeather(position.coords.latitude, position.coords.longitude);
-    }
-
-    async function getWeather(latitude,longitude) {
-        // const addCoords = `https://api.weather.gov/points/${latitude},${longitude}`;
-        // const data = await fetch(addTude);
-        const data = await fetch('https://api.weather.gov/gridpoints/OKX/35,35/forecast');
+    async function getWeather(city) {
+        const mykey = config.MY_KEY;
+        const data = await fetch(`http://api.weatherapi.com/v1/current.json?key=${mykey}=${city}`);
         const result = await data.json();
-        console.log(result.properties.periods[1].shortForecast);
+        
+        displayWeather(result);
+        console.log(result);
+    }
+
+    function displayWeather(result){
+        document.getElementById("city-text").textContent = result.location.name + ", " + result.location.region;
+        document.getElementById("temperature").textContent = result.current.temp_f + "°f";
+        document.getElementById("weather-text").textContent = result.current.condition.text;
     }
 
     function clearText(){

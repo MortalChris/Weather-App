@@ -37,6 +37,10 @@ body{
     background-color: var(--clr-one);
 }
 
+#city-text-container{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
 #input-city-name{
     padding: .6rem;
     border-radius: 1rem 0rem 0rem 0rem;
@@ -69,11 +73,15 @@ body{
     margin-top: 4rem;
     font-size: 2rem;
     color: var(--clr-three);
+    text-align: center;
 }
 img{
     margin-top: 3rem;
     height: 20rem;
     width: auto;
+}
+#temp-weather-container{
+    text-align: center;
 }
 #temperature{
     margin-top: 1rem;
@@ -82,6 +90,5 @@ img{
 }
 #weather-text{
     font-size: 4rem;
-    text-align: center;
     color: var(--clr-three);
 }
