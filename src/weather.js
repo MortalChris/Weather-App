@@ -4,7 +4,6 @@ function weatherApp(){
 
     button.addEventListener("click", function click(){
         const inputCity = document.getElementById("input-city-name").value;
-        console.log(inputCity);
         getWeather(inputCity);
         clearText();
     })  
@@ -22,6 +21,7 @@ function weatherApp(){
         document.getElementById("city-text").textContent = result.location.name + ", " + result.location.region;
         document.getElementById("temperature").textContent = result.current.temp_f + "°f";
         document.getElementById("weather-text").textContent = result.current.condition.text;
+        // document.querySelector("img").src = result.current.condition.icon;
     }
 
     function clearText(){
